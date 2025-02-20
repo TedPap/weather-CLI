@@ -5,8 +5,9 @@ import (
 	"log"
 	"os"
 
+	"weather-CLI/weather"
+
 	"github.com/urfave/cli/v2"
-	"localhost.com/weather-API/weather"
 )
 
 func main() {

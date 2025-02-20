@@ -1,4 +1,4 @@
-module localhost.com/weather-API
+module weather-CLI
 
 go 1.23.5
 
