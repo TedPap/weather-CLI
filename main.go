@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -11,25 +10,12 @@ import (
 )
 
 func main() {
-	var lang string
 
 	app := &cli.App{
-		Flags: []cli.Flag{
-				&cli.StringFlag{
-						Name:  "lang",
-						Aliases: []string{"l", "L"},
-						Value: "english",
-						Usage: "language for the greeting",
-						Destination: &lang,
-				},
-		},
 		Action: func(cCtx *cli.Context) error {
 				if cCtx.NArg() > 0 {
 						location := cCtx.Args().Get(0)
 						weather.GetWeatherReport(location)
-				}
-				if lang != "english" {
-						fmt.Println("Lang set to", lang)
 				}
 				return nil
 		},
